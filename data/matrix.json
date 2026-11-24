@@ -1,0 +1,316 @@
+{
+  "schema_version": "1.0.0",
+  "dataset_name": "2026 WordPress GSAP Animation Compatibility & Performance Matrix",
+  "last_reviewed": "2026-11-23",
+  "maintainer": {
+    "name": "bitPlugins",
+    "url": "https://bitplugins.com/",
+    "founder": "Zaman Tauhid",
+    "founder_url": "https://zamandevs.com/"
+  },
+  "conflict_of_interest_disclosure": "Maintained by bitPlugins (developer of DiviTitan Motion, Gutenberg Motion, and Elementor Motion). Architecture facts are sourced from public vendor documentation and WordPress.org listings as of 2026-11-23. Runtime benchmark slots are strictly left as pending_local_run until measured via scripts/measure-page.mjs. Pull requests with reproducible captures from any plugin author or community member are welcome.",
+  "benchmark_policy": {
+    "runs_required": 5,
+    "aggregation": "median",
+    "cache_mode": "cold_cache_incognito_chromium",
+    "no_fabricated_numbers": true
+  },
+  "entries": [
+    {
+      "id": "divititan-motion",
+      "name": "DiviTitan Motion",
+      "vendor": "bitPlugins",
+      "is_baseline_core": false,
+      "target_builder": "Divi 5",
+      "review_date": "2026-11-23",
+      "source_urls": [
+        "https://divititan.com/",
+        "https://divititan.com/pricing/",
+        "https://divititan.com/docs/"
+      ],
+      "architecture_facts": {
+        "works_on_existing_core_without_lock_in": "Yes — animates existing Divi 5 sections, rows, columns, and modules non-destructively without replacement modules.",
+        "gsap_engine": "Yes (GSAP core + ScrollTrigger + SplitText)",
+        "visual_timeline": "Yes (Simple, Staged, and Advanced Timeline; up to 10 steps/triggers per layer)",
+        "split_text": "Yes (lines, words, characters)",
+        "scroll_trigger": "Yes (scroll, scrub, pin, bidirectional reverse)",
+        "page_transitions": "Yes (dedicated same-site Page Transitions system with global/page/archive/path rules)",
+        "prefers_reduced_motion": "Yes (documented reduced-motion handling)",
+        "ai_workflow": "Yes (One-Click AI Motion + AI Preset Creator; 500 hosted credits on Lifetime tiers, BYOK via WP 7.0+ connectors)",
+        "pricing_model": "Lifetime direct ($64.50 Solo 1-site / $124.50 Agency unlimited on divititan.com)"
+      },
+      "benchmark_status": "pending_local_run",
+      "benchmark_runs": []
+    },
+    {
+      "id": "divimotion",
+      "name": "DiviMotion",
+      "vendor": "WPRio / DiviMotion",
+      "is_baseline_core": false,
+      "target_builder": "Divi 5",
+      "review_date": "2026-11-23",
+      "source_urls": [
+        "https://divimotion.com/"
+      ],
+      "architecture_facts": {
+        "works_on_existing_core_without_lock_in": "Partial — adds Animation Builder panel to sections/rows/columns/modules plus 20+ dedicated custom motion modules/extensions (e.g., Scroll Video, Gravity Box, Elastic Cards).",
+        "gsap_engine": "Yes (GSAP + ScrollTrigger, SplitText, ScrollSmoother, DrawSVG)",
+        "visual_timeline": "Yes (Visual Animation Timeline with color-coded tracks)",
+        "split_text": "Yes",
+        "scroll_trigger": "Yes (scroll, scrub, pinning, horizontal scroll)",
+        "page_transitions": "Yes (Page Transitions extension)",
+        "prefers_reduced_motion": "Not publicly specified in reviewed docs (verify at runtime)",
+        "ai_workflow": "No (manual visual builder & pre-built motion layout packs)",
+        "pricing_model": "Annual ($49/yr 1-site to $79/yr unlimited) and Lifetime ($149+)"
+      },
+      "benchmark_status": "pending_local_run",
+      "benchmark_runs": []
+    },
+    {
+      "id": "divianimator",
+      "name": "DiviAnimator",
+      "vendor": "DiviAnimator",
+      "is_baseline_core": false,
+      "target_builder": "Divi 5",
+      "review_date": "2026-11-23",
+      "source_urls": [
+        "https://divianimator.com/"
+      ],
+      "architecture_facts": {
+        "works_on_existing_core_without_lock_in": "Partial — modular Divi 5 extension suite (13+ extensions) paired with pre-built animated section templates.",
+        "gsap_engine": "Yes (GSAP + ScrollTrigger, ScrollSmoother)",
+        "visual_timeline": "Yes (visual GSAP timeline & parameter controls)",
+        "split_text": "Yes (kinetic typography / text splitting effects)",
+        "scroll_trigger": "Yes (ScrollTrigger & ScrollSmoother extensions)",
+        "page_transitions": "Partial (preloaders and page-load triggers documented)",
+        "prefers_reduced_motion": "Not publicly specified in reviewed docs (verify at runtime)",
+        "ai_workflow": "No (manual code-free parameter controls)",
+        "pricing_model": "Lifetime tiers (~$39 1-site / ~$59 5-site / ~$79 unlimited promo) and annual starter (~$19/yr)"
+      },
+      "benchmark_status": "pending_local_run",
+      "benchmark_runs": []
+    },
+    {
+      "id": "motionkit",
+      "name": "MotionKit",
+      "vendor": "MotionKit",
+      "is_baseline_core": false,
+      "target_builder": "Multi-builder (Divi, Elementor, Gutenberg, Bricks, Breakdance, Oxygen, Avada)",
+      "review_date": "2026-11-23",
+      "source_urls": [
+        "https://motionkit.io/",
+        "https://wordpress.org/plugins/motionkit/"
+      ],
+      "architecture_facts": {
+        "works_on_existing_core_without_lock_in": "Yes — targets rendered CSS classes via lightweight WP connector plugin; published animations persist locally.",
+        "gsap_engine": "Yes (GSAP + ScrollTrigger, SplitText, ScrollSmoother, DrawSVG, MorphSVG, Flip)",
+        "visual_timeline": "Yes (cloud visual timeline editor + 110+ presets)",
+        "split_text": "Yes",
+        "scroll_trigger": "Yes (ScrollTrigger + ScrollSmoother)",
+        "page_transitions": "Yes (documented on Pro / Agency plans)",
+        "prefers_reduced_motion": "Not publicly specified in reviewed docs (verify at runtime)",
+        "ai_workflow": "Yes (AI conversational chat prompt workflow compatible with Claude/ChatGPT)",
+        "pricing_model": "Freemium ($0 1 site/1 page/10 animations), Annual ($24.50–$99.50/yr promo), Lifetime ($53.40–$199.50+)"
+      },
+      "benchmark_status": "pending_local_run",
+      "benchmark_runs": []
+    },
+    {
+      "id": "gutenberg-motion",
+      "name": "Gutenberg Motion",
+      "vendor": "bitPlugins",
+      "is_baseline_core": false,
+      "target_builder": "WordPress Block Editor (Gutenberg, WP 6.5+)",
+      "review_date": "2026-11-23",
+      "source_urls": [
+        "https://bitplugins.com/products/gutenberg-motion/",
+        "https://bitplugins.com/products/gutenberg-motion/try/"
+      ],
+      "architecture_facts": {
+        "works_on_existing_core_without_lock_in": "Yes — applies directly to existing WordPress core blocks, lists, buttons, columns, and patterns without replacement blocks.",
+        "gsap_engine": "Yes (GSAP core + ScrollTrigger + SplitText)",
+        "visual_timeline": "Yes (Simple, Staged, and Advanced Timeline; 251+ presets; 10 trigger types)",
+        "split_text": "Yes (lines, words, characters)",
+        "scroll_trigger": "Yes (scroll, scrub, pin, stagger)",
+        "page_transitions": "Yes (native page transitions)",
+        "prefers_reduced_motion": "Yes (respects prefers-reduced-motion)",
+        "ai_workflow": "Yes (One-Click AI Motion + AI Preset Creator; 500 hosted credits on Lifetime tiers, BYOK via WP 7.0+ connectors)",
+        "pricing_model": "Lifetime direct ($74.50 Solo 1-site / $124.50 Agency unlimited on bitplugins.com)"
+      },
+      "benchmark_status": "pending_local_run",
+      "benchmark_runs": []
+    },
+    {
+      "id": "greenshift",
+      "name": "Greenshift",
+      "vendor": "Greenshift",
+      "is_baseline_core": false,
+      "target_builder": "WordPress Block Editor (Gutenberg / FSE)",
+      "review_date": "2026-11-23",
+      "source_urls": [
+        "https://greenshiftwp.com/",
+        "https://wordpress.org/plugins/greenshift-animation-and-page-builder-blocks/"
+      ],
+      "architecture_facts": {
+        "works_on_existing_core_without_lock_in": "Partial — free built-in CSS/scroll animations apply to core blocks; advanced GSAP timelines, pinning, and SplitText via Animation Addon use the Animation Container block or Greenshift blocks.",
+        "gsap_engine": "Yes (in premium Animation Addon; free core uses lightweight CSS/scroll engine)",
+        "visual_timeline": "Yes (sequential and parallel chained GSAP animations in Animation Addon)",
+        "split_text": "Yes (in Animation Addon)",
+        "scroll_trigger": "Yes (ScrollTrigger, scrub, pinning, batch in Animation Addon)",
+        "page_transitions": "Yes (View Transitions / Page Transitions documented)",
+        "prefers_reduced_motion": "Not publicly specified across GSAP addon docs (verify at runtime)",
+        "ai_workflow": "Yes (Smart Code AI & AI design agents in Greenshift ecosystem)",
+        "pricing_model": "Freemium (wordpress.org core free; Animation Addon / All-in-One bundles ~$39.99–$239.99+/yr or Lifetime)"
+      },
+      "benchmark_status": "pending_local_run",
+      "benchmark_runs": []
+    },
+    {
+      "id": "elementor-motion",
+      "name": "Elementor Motion",
+      "vendor": "bitPlugins",
+      "is_baseline_core": false,
+      "target_builder": "Elementor 4 (Atomic Editor only; does not support Elementor v3)",
+      "review_date": "2026-11-23",
+      "source_urls": [
+        "https://bitplugins.com/products/elementor-motion/",
+        "https://bitplugins.com/products/elementor-motion/try/"
+      ],
+      "architecture_facts": {
+        "works_on_existing_core_without_lock_in": "Yes — animates existing Elementor 4 widgets and containers directly without replacement widget packs.",
+        "gsap_engine": "Yes (GSAP core + ScrollTrigger + SplitText)",
+        "visual_timeline": "Yes (Simple, Staged, and Advanced Timeline; 251+ presets; 10 trigger types)",
+        "split_text": "Yes (lines, words, characters)",
+        "scroll_trigger": "Yes (scroll, scrub, stagger)",
+        "page_transitions": "Yes (native page transitions)",
+        "prefers_reduced_motion": "Yes (respects prefers-reduced-motion)",
+        "ai_workflow": "Yes (One-Click AI Motion + AI Preset Creator; 500 hosted credits on Lifetime tiers, BYOK via WP 7.0+ connectors)",
+        "pricing_model": "Lifetime direct (Solo $74.50–$89.00 1-site / Agency $124.50 unlimited on bitplugins.com)"
+      },
+      "benchmark_status": "pending_local_run",
+      "benchmark_runs": []
+    },
+    {
+      "id": "animation-addons",
+      "name": "Animation Addons",
+      "vendor": "Animation Addons (CrowdyFlow)",
+      "is_baseline_core": false,
+      "target_builder": "Elementor (v3 Classic & Elementor 4 Atomic)",
+      "review_date": "2026-11-23",
+      "source_urls": [
+        "https://animation-addons.com/",
+        "https://wordpress.org/plugins/animation-addons-for-elementor/"
+      ],
+      "architecture_facts": {
+        "works_on_existing_core_without_lock_in": "Hybrid — works alongside Elementor Free/Pro widgets and ships 40+ Elementor 4 Atomic widgets plus GSAP extensions.",
+        "gsap_engine": "Yes (GSAP + ScrollTrigger, ScrollSmoother, SplitText, DrawSVG, MotionPath)",
+        "visual_timeline": "Yes (timeline-based sequence animations inside Elementor panel)",
+        "split_text": "Yes (Text Animation extension via GSAP SplitText)",
+        "scroll_trigger": "Yes (ScrollTrigger, scrub, pinning, horizontal scroll)",
+        "page_transitions": "Partial (smooth scroll utilities and loaders; conditional lazy asset loading)",
+        "prefers_reduced_motion": "Yes (explicit reduced-motion toggles and prefers-reduced-motion checks documented)",
+        "ai_workflow": "No (no native AI motion generator documented)",
+        "pricing_model": "Freemium (wordpress.org free + Pro $49–$159/yr or $85–$399 Lifetime)"
+      },
+      "benchmark_status": "pending_local_run",
+      "benchmark_runs": []
+    },
+    {
+      "id": "essential-blocks",
+      "name": "Essential Blocks",
+      "vendor": "WPDeveloper",
+      "is_baseline_core": false,
+      "target_builder": "WordPress Block Editor (Gutenberg)",
+      "review_date": "2026-11-23",
+      "source_urls": [
+        "https://essential-blocks.com/",
+        "https://wordpress.org/plugins/essential-blocks/"
+      ],
+      "architecture_facts": {
+        "works_on_existing_core_without_lock_in": "Partial — 70+ custom block suite; Pro Interactive Animation attaches to Essential Blocks and Animated Wrapper wraps blocks.",
+        "gsap_engine": "Yes (Pro Interactive Animation extension built on GSAP)",
+        "visual_timeline": "Limited (From / To / From-To property transitions)",
+        "split_text": "No",
+        "scroll_trigger": "Yes (scroll trigger via Pro Interactive Animation)",
+        "page_transitions": "No",
+        "prefers_reduced_motion": "Not publicly specified in reviewed Interactive Animation docs (verify at runtime)",
+        "ai_workflow": "No (AI block content generation in suite, not AI GSAP motion)",
+        "pricing_model": "Freemium (wordpress.org free + Pro ~$49–$349/yr or Visionary Lifetime)"
+      },
+      "benchmark_status": "pending_local_run",
+      "benchmark_runs": []
+    },
+    {
+      "id": "divi-5-core",
+      "name": "Divi 5 Core (Native Baseline)",
+      "vendor": "Elegant Themes",
+      "is_baseline_core": true,
+      "target_builder": "Divi 5",
+      "review_date": "2026-11-23",
+      "source_urls": [
+        "https://www.elegantthemes.com/"
+      ],
+      "architecture_facts": {
+        "works_on_existing_core_without_lock_in": "Yes (native Divi 5 builder)",
+        "gsap_engine": "No (native CSS & scroll transform effects)",
+        "visual_timeline": "No (per-module duration/delay controls)",
+        "split_text": "No",
+        "scroll_trigger": "Partial (native scroll translate/scale/rotate/skew effects)",
+        "page_transitions": "No",
+        "prefers_reduced_motion": "Partial (OS/CSS level only)",
+        "ai_workflow": "No (Divi AI does not generate GSAP timelines)",
+        "pricing_model": "Included with Divi license"
+      },
+      "benchmark_status": "pending_local_run",
+      "benchmark_runs": []
+    },
+    {
+      "id": "gutenberg-core",
+      "name": "WordPress / Gutenberg Core (Native Baseline)",
+      "vendor": "WordPress.org",
+      "is_baseline_core": true,
+      "target_builder": "WordPress 6.8 / 6.9",
+      "review_date": "2026-11-23",
+      "source_urls": [
+        "https://wordpress.org/"
+      ],
+      "architecture_facts": {
+        "works_on_existing_core_without_lock_in": "Yes (WordPress core blocks)",
+        "gsap_engine": "No",
+        "visual_timeline": "No",
+        "split_text": "No",
+        "scroll_trigger": "No",
+        "page_transitions": "No",
+        "prefers_reduced_motion": "Yes (core theme & CSS prefers-reduced-motion guidelines)",
+        "ai_workflow": "No",
+        "pricing_model": "Free / Open Source (GPLv2+)"
+      },
+      "benchmark_status": "pending_local_run",
+      "benchmark_runs": []
+    },
+    {
+      "id": "elementor-4-core",
+      "name": "Elementor 4 Core (Native Baseline)",
+      "vendor": "Elementor",
+      "is_baseline_core": true,
+      "target_builder": "Elementor 4",
+      "review_date": "2026-11-23",
+      "source_urls": [
+        "https://elementor.com/"
+      ],
+      "architecture_facts": {
+        "works_on_existing_core_without_lock_in": "Yes (native Elementor 4 editor)",
+        "gsap_engine": "No (CSS-first Atomic state transitions & transforms)",
+        "visual_timeline": "No",
+        "split_text": "No",
+        "scroll_trigger": "Partial (Pro motion effects)",
+        "page_transitions": "No",
+        "prefers_reduced_motion": "Yes (frontend core prefers-reduced-motion support)",
+        "ai_workflow": "No (Elementor AI does not generate GSAP timelines)",
+        "pricing_model": "Free Core / Pro Annual"
+      },
+      "benchmark_status": "pending_local_run",
+      "benchmark_runs": []
+    }
+  ]
+}

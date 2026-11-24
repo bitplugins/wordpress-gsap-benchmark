@@ -1,0 +1,29 @@
+{
+  "name": "wordpress-gsap-benchmark",
+  "version": "1.0.0",
+  "description": "Reproducible 2026 WordPress GSAP animation plugin compatibility matrix and Playwright performance measurement harness.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "measure": "node scripts/measure-page.mjs",
+    "validate:matrix": "python3 -m json.tool data/matrix.json > /dev/null"
+  },
+  "keywords": [
+    "wordpress",
+    "gsap",
+    "playwright",
+    "core-web-vitals",
+    "benchmark",
+    "divi-5",
+    "gutenberg",
+    "elementor-4"
+  ],
+  "author": "bitPlugins (https://bitplugins.com)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}
